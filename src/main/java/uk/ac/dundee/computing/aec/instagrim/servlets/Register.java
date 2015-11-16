@@ -8,7 +8,6 @@ package uk.ac.dundee.computing.aec.instagrim.servlets;
 
 import com.datastax.driver.core.Cluster;
 import java.io.IOException;
-import java.io.PrintWriter;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletConfig;
 import javax.servlet.ServletException;
@@ -18,7 +17,6 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import uk.ac.dundee.computing.aec.instagrim.lib.CassandraHosts;
 import uk.ac.dundee.computing.aec.instagrim.models.User;
-
 /**
  *
  * @author Administrator
@@ -26,12 +24,11 @@ import uk.ac.dundee.computing.aec.instagrim.models.User;
 @WebServlet(name = "Register", urlPatterns = {"/Register"})
 public class Register extends HttpServlet {
     Cluster cluster=null;
+    @Override
     public void init(ServletConfig config) throws ServletException {
         // TODO Auto-generated method stub
         cluster = CassandraHosts.getCluster();
     }
-
-
 
 
     /**
@@ -45,15 +42,23 @@ public class Register extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+        boolean checkname=false;
         String username=request.getParameter("username");
         String password=request.getParameter("password");
-        
+        String email=request.getParameter("email");
+        String gender=request.getParameter("gender");
         User us=new User();
         us.setCluster(cluster);
-        us.RegisterUser(username, password);
-        
-	response.sendRedirect("/Instagrim");
-        
+        checkname = us.CheckUser(username);
+        if(checkname){
+            us.RegisterUser(username, password, email, gender);            
+            response.sendRedirect("/Instagrim");
+        }
+        else{
+            RequestDispatcher rd = request.getRequestDispatcher("/register.jsp");
+            request.setAttribute("checkname", "error");
+            rd.forward(request, response);
+        }
     }
 
     /**

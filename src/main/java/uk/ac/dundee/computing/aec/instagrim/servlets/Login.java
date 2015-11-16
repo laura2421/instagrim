@@ -8,7 +8,6 @@ package uk.ac.dundee.computing.aec.instagrim.servlets;
 
 import com.datastax.driver.core.Cluster;
 import java.io.IOException;
-import java.io.PrintWriter;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletConfig;
 import javax.servlet.ServletException;
@@ -27,6 +26,32 @@ import uk.ac.dundee.computing.aec.instagrim.stores.LoggedIn;
  */
 @WebServlet(name = "Login", urlPatterns = {"/Login"})
 public class Login extends HttpServlet {
+    
+    // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
+    /**
+     * Handles the HTTP <code>GET</code> method.
+     *
+     * @param request servlet request
+     * @param response servlet response
+     * @throws ServletException if a servlet-specific error occurs
+     * @throws IOException if an I/O error occurs
+     */
+    @Override
+    protected void doGet(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+        String userPath = request.getServletPath();
+
+        // if index page is requested
+        if (userPath.equals("/index")) {     
+            String url = userPath + ".jsp";
+            try {
+                    request.getRequestDispatcher(url).forward(request, response);
+                } catch (Exception ex) {
+                    ex.printStackTrace();
+                    }
+        }
+
+    }
 
     Cluster cluster=null;
 
@@ -60,6 +85,8 @@ public class Login extends HttpServlet {
             LoggedIn lg= new LoggedIn();
             lg.setLogedin();
             lg.setUsername(username);
+            lg.setGender(us.UserGender(username));
+            lg.setUserImgNum(us.UserImgNum(username));
             //request.setAttribute("LoggedIn", lg);
             
             session.setAttribute("LoggedIn", lg);

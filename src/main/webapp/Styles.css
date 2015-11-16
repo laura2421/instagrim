@@ -9,8 +9,507 @@ and open the template in the editor.
 */
 
 
+a{color:#999999;text-decoration:none; }
+a:hover {color:#ccccff;text-decoration:underline;}
+
 nav {
-    text-align: left;
-    border: 2px;
+    height:200px;
+    float:right;
+    margin-top:10px;
+    font-family: 'Ameican Typewriter',Courier,monospace;
+}
+
+header {
+    height: 140px;
+    border-bottom: 1px solid #fff;
+    text-align: center;
+    color: #fff;
+    margin-top: 0;
+}
+
+.headerWidget {
+    width: 394px;
+    margin: 0 2px;
+    font-size: small;
     float: right;
+    line-height: 25px;
+    color: #fff;
+}
+
+body {
+    font-family: 'Ameican Typewriter',Courier,monospace;
+    color: #fff;
+    width: 1100px;
+    margin: 20px auto;
+}
+
+#indexLeftColumn {
+    height: 400px;
+    width: 200px;
+    margin-left: 60px;
+    float: left;
+}
+#indexLeftColumn div.picBox {
+    height: auto;
+    width: 200px;
+    text-align: center;
+    margin-top: 0;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+#indexLeftColumn div.userprofile {
+    height: 20px;
+    width: 200px;
+    font-family: 'Ameican Typewriter',Courier,monospace;
+    font-size:16px;
+    color: #f0f0f0;
+    margin-top: 0;
+    line-height: 35px;
+    text-align: center;
+
+}
+
+#indexRightColumn {
+    height: 400px;
+    width: 180px;
+    float: right;
+    margin-right: 60px;
+}
+#indexRightColumn div.choiceList {
+    margin-top: 15px;
+    height: 80px;
+    width: 180px;
+    font-family: 'Ameican Typewriter',Courier,monospace;
+    font-size:18px;
+    line-height: 30px;
+    text-align: left;
+    padding:20px;
+}
+
+#registerColumn{
+    height:400px;
+    width:800px;
+    margin-top: 55px;
+    margin-left: 270px;
+    border-left: 1px solid #f0f0f0;
+}
+#registerColumn h2{
+    width: 200px;
+    margin-top: 10px;
+    padding-left: 60px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #f0f0f0;
+}
+#registerColumn div.registerName{
+    margin-top: 36px;
+    margin-left: 120px;
+    text-align:left;
+    position:relative;
+}
+#registerColumn div.registerPass{
+    margin-left: 133px;
+    text-align:left;
+    position:relative;
+}
+#registerColumn div.registerComfirm{
+    margin-left: 55px;
+    text-align:left;
+    position:relative;
+}
+#registerColumn div.registerEmail{
+    margin-left:160px;
+    text-align:left;
+    position:relative;
+}
+#registerColumn div.registerAddr{
+    text-align: right;
+    margin-right: 430px;
+    line-height: 150%;
+    position: relative;
+}
+#registerColumn div.registerGender{
+    margin-left:170px;
+    text-align:left;
+    position:relative;
+}
+#registerColumn div.enter{
+    padding-left:180px;
+    text-align:left;
+    padding-top: 20px;
+    position:relative;
+}
+#registerColumn input.text{
+    width:200px;
+    height:15px;
+    border:1px solid #ccc;
+}
+
+#loginColumn{
+    height:280px;
+    width:400px;
+    margin-left: 250px;
+    margin-top: 40px;
+    border-left: 1px solid #ccccff;
+}
+#loginColumn h2{
+    width: 140px;
+    height: 40px;
+    padding-left: 20px;
+    padding-top: 14px;
+    border-bottom: 1px solid #ccccff;
+}
+#loginColumn form{
+    padding-left: 20px;
+    padding-top: 15px;
+}
+#loginColumn div.login{
+    text-align: center;
+}
+
+#uploadUser{
+    margin-left: 300px;
+    margin-top: 50px;
+}
+#chooseUserImg{
+    height:300px;
+    width:300px;
+    background:#aaa; 
+}
+
+#PicDetail{
+    width: 450px;
+    height: auto;
+    border-top:1px solid #ccc;
+    border-left: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+    margin-left: 300px;
+}
+#PicDetail div.title{
+    height: auto;
+    width: 450px;
+    text-align: left;
+    padding-left: 10px;
+    padding-top: 5px;
+}
+#PicDetail div.pic{
+    width: 450px;
+    height: 200px;
+    margin-top: 30px; 
+    margin-left: 0;
+    margin-bottom: 0;
+    text-align: center;
+}
+#PicDetail ul{
+    width: 440px;
+    height:5px;
+    text-align: center;
+    font-size: 18px;
+    letter-spacing: 0;
+    color:#666;
+    margin-top: 0;
+    padding:5px;
+    border-top: 1px solid #ccc;
+    
+}
+#PicDetail li{
+    height:20px;
+    text-align: left;
+    margin-top: 0;
+    margin-left: 20px;
+    padding:0;
+}
+#PicDetail div.comment{
+    font-size: 14px;
+    padding: 10px 0;
+    text-align: center;
+}
+#PicDetail input.text{
+    width: 200px;
+    height: 20px;
+    border: 1px solid #ccc;
+    background: #fff;
+    
+}
+#PicDetail form div.button{
+    text-align: center;
+    padding: 10px 0;
+}
+#PicDetail form input.submit{
+    width: 80px;
+    height: 20px;
+    font-size: 12px;
+    cursor:pointer;
+}
+#PicDetail div.notLogin{
+    width:450px;
+    height: 20px;
+    font-size: 16px;
+    text-align: center;
+    border-bottom: 1px solid #ccc;
+}
+#display{
+    width: 450px;
+    height: auto;
+    border-top:1px solid #ccc;
+    border-left: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+    margin-left: 300px;
+}
+#display div.title{
+    height: auto;
+    width: 450px;
+    text-align: left;
+    padding-left: 10px;
+    padding-top: 5px;
+}
+#display div.pic{
+    width: 450px;
+    height: auto;
+    margin-top: 10px; 
+    margin-left: 0;
+    margin-bottom: 10px;
+    text-align: center;
+}
+#display div.otherAction{
+    width: 450px;
+    height: 40px;
+    font-family: 'Ameican Typewriter',Courier,monospace;
+    margin-left: 0px;
+    padding-top: 20px;
+    border-top:1px solid #ccc;
+}
+#display div.otherAction div.filter{
+    height: 40px;
+    width: 100px;
+    float: left;
+    padding-left: 20px;
+}
+#display div.otherAction div.download{
+    height: 40px;
+    width: 100px;
+    float: left;
+    margin-left: 60px;
+}
+#display div.otherAction div.delete{
+    height: 40px;
+    width: 100px;
+    float: right;
+    padding-right: 0px;
+}
+#display ul{
+    width: 425px;
+    height:5px;
+    text-align: left;
+    font-size: 18px;
+    letter-spacing: 0;
+    color:#666;
+    margin-top: 0;
+    padding:5px;
+    padding-left: 20px;
+    border-top: 1px solid #ccc;
+}
+#display li{
+    height:20px;
+    text-align: left;
+    margin-top: 0;
+    margin-left: 20px;
+    padding:0;
+}
+#display div.comment{
+    font-size: 14px;
+    padding: 10px 0;
+    text-align: center;
+}
+#display input.text{
+    width: 200px;
+    height: 20px;
+    border: 1px solid #ccc;
+    background: #fff;
+    
+}
+#display form div.button{
+    text-align: center;
+    padding: 10px 0;
+}
+#display form input.submit{
+    width: 80px;
+    height: 20px;
+    font-size: 12px;
+    cursor:pointer;
+}
+
+#alterPic{
+    width: 1000px;
+    height: 500px;
+}
+#alterPic h1{
+    width: 1000px;
+    height: 40px;
+    margin-top: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #ccc;
+    text-align: center;
+}
+#alterPic div.alterImg{
+    width: 1000px;  
+    text-align: center;
+}
+#alterPic div.filterCategory{
+    width: 800px;
+    height: 50px;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid #ccc;
+    text-align: left;
+    padding-left: 200px;
+    font-family: 'Ameican Typewriter',Courier,monospace;
+    font-size: 18px;
+}
+#alterPic div.choiceCategory{
+    width: 1000px;
+    height: 20px;
+    margin-top: 40px;
+    padding-top: 10px;
+    text-align: center;
+    font-family: 'Ameican Typewriter',Courier,monospace;
+    font-size: 14px;
+}
+#alterPic div.button{
+    width: 800px;
+    height: 20px;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid #ccc;
+    text-align: right;
+    padding-right: 200px;
+    font-family: 'Ameican Typewriter',Courier,monospace;
+    font-size: 12px;
+}
+
+#follow{
+    width: 500px;
+    height: auto;
+    float: left;
+    margin-left: 300px;
+    margin-top: 20px;
+    border: 1px solid #ccc;
+}
+#follow div.followerlist{
+    width: 500px;
+    height: auto;    
+    padding-left: 20px;  
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+#follow div.followerlist li{
+    padding: 10px;
+    margin-left: 20px;
+    line-height: 5px;
+}
+#follow div.followinglist{
+    width: 500px;
+    height: auto;    
+    padding-left: 20px;  
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+#follow div.followinglist li{
+    padding: 10px;
+    margin-left: 20px;
+    line-height: 5px;
+}
+#follow div.addFollowing{
+    width: 460px;
+    height: auto;
+    line-height: 20px;
+    padding: 20px;
+    border-top: 1px solid #ccc;
+}
+#follow div.addFollowing div.button{
+    padding-top: 10px;
+    text-align: right;
+}
+#follow div.addFollowing li{
+    padding: 10px;
+    margin-left: 20px;
+    line-height: 5px; 
+}
+#follow div.recommend{
+    padding: 20px;
+    border-top: 1px solid #ccc;
+}
+#follow div.recommend li{
+    line-height: 15px;
+    padding-top: 10px;
+}
+
+#uploadUser{
+    width: 450px;
+    margin-top: 100px;
+    margin-left: 350px;
+}
+#uploadUser h3{
+    padding-bottom: 20px;
+}
+#uploadUser h4{
+    padding-top: 20px;
+    padding-left: 0;    
+}
+
+#uploadPic{
+    width: 450px;
+    margin-top: 20px;
+    margin-left: 350px;
+}
+#uploadPic h3{
+    padding-bottom: 20px;
+}
+#uploadPic div.message li{
+    padding-top: 20px;
+    margin-left: 20px;    
+}
+#uploadPic div.time li{
+    padding-top: 15px;
+    margin-left: 20px;
+    padding-bottom: 30px;
+}
+
+#uploadRightColumn {
+    height: 400px;
+    width: 180px;
+    float: right;
+    margin-right: 10px;
+    margin-top: 0;
+}
+#uploadRightColumn div.choicelist {
+    margin-top: 0;
+    height: 80px;
+    width: 180px;
+    font-family: 'Ameican Typewriter',Courier,monospace;
+    font-size:18px;
+    line-height: 30px;
+    text-align: left;
+    padding:20px;
+}
+
+#userProfiles{
+    margin-top: 40px;
+    margin-left: 350px;
+    text-align: left;
+    line-height: 30px;
+    font-family: 'Ameican Typewriter',Courier,monospace;
+    font-size: 18px;
+}
+
+footer {
+    height: 20px;
+    width: 80px;
+    float: right;
+    margin-top: 470px;
+    margin-right: 280px;
+    line-height: 15px;
+    text-align:right;
+    font-family: 'Ameican Typewriter',Courier,monospace;
+    font-size: 14px;
 }

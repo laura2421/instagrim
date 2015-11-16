@@ -18,6 +18,10 @@ public class Pic {
     private int length;
     private String type;
     private java.util.UUID UUID=null;
+    private int thumbnum=0;
+    private int messagenum=0;
+    private String picTime=null;
+    private String user=null;
     
     public void Pic() {
 
@@ -46,10 +50,37 @@ public class Pic {
         return type;
     }
 
-    public byte[] getBytes() {
-         
+    public byte[] getBytes() {         
         byte image[] = Bytes.getArray(bImage);
         return image;
+    }
+    
+    public int getThumbNum(){
+        return thumbnum;
+    }    
+    public void setThumbNum(int num){
+        this.thumbnum=num;
+    }
+    
+    public String getTime(){
+        return picTime;
+    }   
+    public void setTime(String time){
+        this.picTime=time;
+    }
+    
+    public String getUser(){
+        return user;
+    }    
+    public void setUser(String user){
+        this.user=user;
+    }
+    
+    public int getMessageNum(){
+        return messagenum;
+    }   
+    public void setMessageNum(int num){
+        this.messagenum=num;
     }
 
 }

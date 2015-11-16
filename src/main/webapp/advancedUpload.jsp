@@ -1,6 +1,6 @@
 <%-- 
-    Document   : upload
-    Created on : Sep 22, 2014, 6:31:50 PM
+    Document   : advancedUpload
+    Created on : 2015-10-28, 16:10:24
     Author     : Administrator
 --%>
 
@@ -35,17 +35,26 @@
             <div id="uploadRightColumn">
                 <div class="choicelist">
                     <li><a href="/Instagrim/Images/<%=lg.getUsername()%>">Your Images</a><br></li>
-                    <li><a href="advancedUpload.jsp">Advanced</a></li>
+                    <li><a href="upload.jsp">General</a></li>
                 </div>
             </div>
             <div id="uploadPic">
                 <h3>File Upload</h3>
-                <form method="POST" enctype="multipart/form-data" action="Image">
-                    File to upload: <input type="file" name="upfile"><br><br><br><br>
+                <form method="POST" enctype="multipart/form-data" action="AdvancedImage">
+                    File to upload: <input type="file" name="upfile"><br>
+                    <div class="message"><li>Say something? <input type="text" name="message" class="type"></li></div>
+                    <div class="time">
+                        <li>Set time to send?                   
+                            HH:<input type="text" name="hour" size="1" maxlength="2" class="type">
+                            mm:<input type="text" name="minute" size="1" maxlength="2" class="type">
+                            ss:<input type="text" name="second" size="1" maxlength="2" class="type">
+                        </li>
+                    </div>
                     <input type="submit" value="Upload">
-                </form>                
+                </form>
             </div>
-            
         </article>
+            
     </body>
 </html>
+
