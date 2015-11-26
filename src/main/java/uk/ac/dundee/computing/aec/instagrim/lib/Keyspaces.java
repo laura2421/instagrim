@@ -12,7 +12,7 @@ public final class Keyspaces {
     public static void SetUpKeySpaces(Cluster c) {
         try {
             //Add some keyspaces here
-            String createkeyspace = "create keyspace if not exists instagrim  WITH replication = {'class':'SimpleStrategy', 'replication_factor':1}";
+            String createkeyspace = "create keyspace if not exists instagrimYan  WITH replication = {'class':'SimpleStrategy', 'replication_factor':1}";
             String CreatePicTable = "CREATE TABLE if not exists instagrimYan.Pics ("
                     + " user varchar,"
                     + " picid uuid, "
